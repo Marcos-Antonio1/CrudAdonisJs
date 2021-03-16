@@ -1,0 +1,41 @@
+@layout('layout.master')
+@section('conteudo')
+<div class="footer">
+    <h1>Clientes cadastrados</h1>
+<a href="{{route('formulariocliente')}}"><button type="button" class="btn btn-success" >Cadastrar Cliente</button> </a>
+</div>
+<table class="table">
+    <thead>
+      <tr>
+        <th scope="col">ID</th>
+        <th scope="col">CPF</th>
+        <th scope="col">Nome</th>
+        <th scope="col">Email</th>
+        <th scope="col">Idade</th>
+        <th scope="col">Telefone</th>
+        <th scope="col"> Ações <th> 
+      </tr>
+    </thead>
+    <tbody>
+      @each(cliente in clientes)  
+      <tr>
+      <th scope="row">{{cliente.id}}</th>
+        <td>{{cliente.cpf}}</td>
+        <td>{{cliente.nome}}</td>
+        <td>{{cliente.email}}</td>
+        <td>{{cliente.idade}}</td>
+        <td>{{cliente.telefone}}</td>
+        <td> 
+            <div class="btn-group" role="group" aria-label="Basic mixed styles example">
+            <form action="{{route('delete.cliente',{id:cliente.id})}}" method="post">
+              {{ csrfField() }}
+              <button type="submit" class="btn btn-danger" >Deletar</button>
+            </form>
+            <a href="{{route('view.cliente.update',{id:cliente.id})}}"><button type="button" class="btn btn-warning">Atualizar</button>
+              </div>
+        </td>
+      </tr>
+      @endeach
+    </tbody>
+  </table>
+@endsection

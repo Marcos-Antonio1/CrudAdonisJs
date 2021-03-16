@@ -1,0 +1,61 @@
+@layout('layout.master')
+
+@section('conteudo')
+    @if(!usuario)
+        <h1 class="mt-5">Cadastro de Clientes</h1>  
+        <form action="{{route('cadastrar.cliente')}}" method="post">
+            {{ csrfField() }}
+            <div class="form-group">
+                <label for="cpf" class="form-label">CPF</label>
+                <input type="number" value="" name="cpf" class="form-control" id="cpf" required>
+            </div>
+            <div class="form-group">
+                <label for="email"  class="form-label">Email</label>
+                <input type="email" name="email" class="form-control" id="email" aria-describedby="emailHelp" required>
+            </div>
+            <div class="form-group">
+                <label for="nome"  class="form-label">Nome</label>
+                <input type="text" name="nome" class="form-control" id="nome" required>
+            </div>
+            <div class="form-group">
+                <label for="idade"  class="form-label">idade</label>
+                <input type="number" name="idade" class="form-control" id="idade" required>
+            </div>
+            <div class="form-group">
+                <label for="telefone"  class="form-label">Telefone</label>
+                <input type="number" name="telefone" class="form-control" id="telefone" required>
+            </div>
+            <div class="form-group">
+                <button type="submit" class="btn btn-primary mt-4">Cadastrar</button>
+            </div>
+        </form>
+    @else
+        <h1 class="mt-5">Atualizar dados </h1>  
+        <form action="{{route('update.cliente',{id:usuario.id})}}" method="post">
+            {{ csrfField() }}
+            <div class="form-group">
+                <label for="cpf" class="form-label">CPF</label>
+                <input type="number" value="{{usuario.cpf}}" name="cpf" class="form-control" id="cpf" required>
+            </div>
+            <div class="form-group">
+                <label for="email"  class="form-label">Email</label>
+                <input type="email" name="email" value="{{usuario.email}}" class="form-control" id="email" aria-describedby="emailHelp" required>
+            </div>
+            <div class="form-group">
+                <label for="nome"  class="form-label">Nome</label>
+                <input type="text" name="nome" value="{{usuario.nome}}" class="form-control" id="nome" required>
+            </div>
+            <div class="form-group">
+                <label for="idade"  class="form-label">idade</label>
+                <input type="number" name="idade" value="{{usuario.idade}}" class="form-control" id="idade" required>
+            </div>
+            <div class="form-group">
+                <label for="telefone"  class="form-label">Telefone</label>
+            <input type="number" name="telefone" value="{{usuario.telefone}}" class="form-control" id="telefone" required>
+            </div>
+            <div class="form-group">
+                <button type="submit" class="btn btn-primary mt-4">Atualizar</button>
+            </div>
+        </form>
+    @endif
+@endsection
