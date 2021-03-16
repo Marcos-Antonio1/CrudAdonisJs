@@ -18,5 +18,5 @@
 ### 🛠 Tecnologias
 
 As seguintes ferramentas foram usadas na construção do projeto:
-  -[Adonis js]
-  -[bootstrap4]
+  - Adonis js
+  - bootstrap4
