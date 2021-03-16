@@ -1,31 +1,22 @@
-# Adonis fullstack application
-
-This is the fullstack boilerplate for AdonisJs, it comes pre-configured with.
-
-1. Bodyparser
-2. Session
-3. Authentication
-4. Web security middleware
-5. CORS
-6. Edge template engine
-7. Lucid ORM
-8. Migrations and seeds
-
-## Setup
-
-Use the adonis command to install the blueprint
-
-```bash
-adonis new yardstick
-```
-
-or manually clone the repo and then run `npm install`.
+# Crud de clientes
 
 
-### Migrations
+<p align="center">Crud realizado para fins de estudo do framework AdonisJs</p>
 
-Run the following command to run startup migrations.
+## Instalação 
+  1. npm i -g @adonisjs/cli 
+  2. npm i 
+  3. adonis migration:run
+  4. adonis serve --dev (run server)
 
-```js
-adonis migration:run
-```
+## Funcionalidade 
+  - [x] Cadastro de clientes
+  - [x] Atualização de clientes
+  - [x] Exclusão de clientes
+  - [x] Mostrar clientes
+
+### 🛠 Tecnologias
+
+As seguintes ferramentas foram usadas na construção do projeto:
+  -[Adonis js]
+  -[bootstrap4]
