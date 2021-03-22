@@ -17,10 +17,11 @@
 const Route = use('Route')
 
 //interação com os models
-Route.get('/','ClienteController.listarClientes').as('lista')
-Route.post('/cadastrarClientes','ClienteController.insertUpdate').as('cadastrar.cliente')
+Route.get('/','ClienteController.listarClientes').as('lista')  
+Route.post('/cadastrarClientes','ClienteController.insert').as('cadastrar.cliente')
 Route.post('/clientes/delete/:id','ClienteController.delete').as('delete.cliente')
 Route.get('/UpdateView/Cliente/:id','ClienteController.viewCliente').as ('view.cliente.update')
-Route.post('/updateCliente/:id','ClienteController.insertUpdate').as('update.cliente')
+Route.post('/updateCliente/:id','ClienteController.update').as('update.cliente')
 //renderização da view
 Route.on('/formClientes').render('FormCadastroClientes').as("formulariocliente")
+Route.on('/formUpdate/:id').render('upddateDataClientes').as('formUpdate')

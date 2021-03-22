@@ -1,0 +1,24 @@
+.title{
+    margin-top: 20px;
+}
+.search{
+    display: flex;
+    flex-direction: row;
+}
+.search button{
+    margin-left: 5px;
+}
+
+.btn-cadastro{
+    margin-top: 10px;
+}
+
+.op-search{
+    display: flex;
+    flex-direction: row;
+    margin:10px;
+}
+
+.bt-lista{
+    margin-left: 10px;
+}
