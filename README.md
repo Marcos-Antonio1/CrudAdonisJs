@@ -14,6 +14,16 @@
   - [x] Atualização de clientes
   - [x] Exclusão de clientes
   - [x] Mostrar clientes
+ 
+ ## Preview 
+ <p align="center">
+  <h1> Home da Aplicação </h1>
+  <img src="public/home.png" width="750" >
+  <h1>Cadastro</h1>
+  <img src="public/cadastro.gif" width="750">
+   <h1>Busca</h1>
+  <img src="public/busca.gif" width="750">
+</p>
 
 ### 🛠 Tecnologias
 
